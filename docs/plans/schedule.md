@@ -19,3 +19,5 @@ https://github.com/rolling-scopes-school/tasks/blob/master/fullstack-engineering
 14 - пройтись по github
 
 Meet: 12.11 09,00 - 12,00 (настройка, + обсудим идеи проектов)
+
+20 - Определение стека
