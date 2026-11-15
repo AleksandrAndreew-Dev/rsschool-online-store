@@ -28,6 +28,7 @@ export default tseslint.config(
       'eslint.config.js',
       'tsconfig.json',
       'tsconfig.build.json',
+      'vite.config.ts',
     ],
   }
 );
