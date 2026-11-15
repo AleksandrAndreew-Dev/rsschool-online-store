@@ -1,1 +1,1 @@
-# rsschool-online-store
+# Team Project: Pharmacy Online Store
