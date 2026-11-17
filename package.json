@@ -1,23 +1,31 @@
 {
   "name": "rsschool-online-store",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run --passWithNoTests",
+    "prepare": "husky",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "eslint . --ext .ts,.js --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AleksandrAndreew-Dev/rsschool-online-store.git"
+  "lint-staged": {
+    "*.{ts,js,json,css,md}": "prettier --write",
+    "*.{ts,js}": "eslint --fix"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AleksandrAndreew-Dev/rsschool-online-store/issues"
-  },
-  "homepage": "https://github.com/AleksandrAndreew-Dev/rsschool-online-store#readme"
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "eslint-plugin-prettier": "^5.5.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.10.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.2",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  }
 }
