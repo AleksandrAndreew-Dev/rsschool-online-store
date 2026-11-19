@@ -2,38 +2,48 @@ import { createEl } from '../utils/createElement';
 
 export function Header(): HTMLElement {
   const header = createEl({ tag: 'header', className: 'header' });
-  const container = createEl({ tag: 'div', className: 'header_container', parent: header });
-  const nav = createEl({
+  const container = createEl({ tag: 'div', className: 'header__container', parent: header });
+  createEl({
     tag: 'a',
-    className: 'header_logo',
+    className: 'header__logo',
     text: 'Novamedika.com',
     attrs: { href: '#/' },
     parent: container,
   });
+
+  const nav = createEl({ tag: 'nav', className: 'header__nav', parent: container });
+  const list = createEl({ tag: 'ul', className: 'header__list', parent: nav });
+
+  const catalogItem = createEl({ tag: 'li', className: 'header__item', parent: list });
   createEl({
     tag: 'a',
-    className: 'header_link',
+    className: 'header__link',
     text: 'Каталог',
     attrs: { href: '#/' },
-    parent: nav,
+    parent: catalogItem,
   });
+
+  const aboutItem = createEl({ tag: 'li', className: 'header__item', parent: list });
   createEl({
     tag: 'a',
     className: 'header__link',
     text: 'О нас',
     attrs: { href: '#/about' },
-    parent: nav,
+    parent: aboutItem,
   });
+
+  const cartItem = createEl({ tag: 'li', className: 'header__item', parent: list });
   const cartLink = createEl({
     tag: 'a',
     className: 'header__link header__cart',
-    text: 'Корзина ',
+    text: 'Корзина',
     attrs: { href: '#/cart' },
-    parent: nav,
+    parent: cartItem,
   });
+
   createEl({
     tag: 'span',
-    className: 'header_cart-count',
+    className: 'header__cart-count',
     text: '0',
     attrs: { id: 'cart-count' },
     parent: cartLink,
