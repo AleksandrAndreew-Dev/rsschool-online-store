@@ -1,12 +1,16 @@
-interface ElementOption {
+export interface ElementOption {
   tag: string;
   className?: string;
   text?: string;
   parent?: HTMLElement;
-  attrs?: Record<string, string>;
+  attrs?: Record<string, string | number | boolean>;
 }
 
 export function createEl(options: ElementOption): HTMLElement {
+  if (!options.tag || !options.tag.trim()) {
+    throw new Error('Tag is required');
+  }
+
   const element = document.createElement(options.tag);
 
   if (options.className) {
@@ -15,13 +19,13 @@ export function createEl(options: ElementOption): HTMLElement {
   if (options.text) {
     element.textContent = options.text;
   }
-  if (options.parent) {
-    options.parent.append(element);
-  }
   if (options.attrs) {
     Object.entries(options.attrs).forEach(([key, value]) => {
-      element.setAttribute(key, value);
+      element.setAttribute(key, String(value));
     });
+  }
+  if (options.parent) {
+    options.parent.append(element);
   }
 
   return element;
