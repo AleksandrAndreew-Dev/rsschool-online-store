@@ -1,7 +1,3 @@
-/**
-
- */
-
 type Path = '#/' | '#/about' | '#/cart';
 type RouteListener = (path: Path) => void;
 
@@ -15,12 +11,21 @@ class Router {
   constructor() {
     this.routes = ['#/', '#/about', '#/cart'];
 
-    if (!window.location.hash) {
-      window.location.hash = '#/';
+    const initialHash = window.location.hash;
+    const nextPath = this.normalizePath(initialHash);
+    this.currentPath = nextPath;
+
+    if (initialHash !== nextPath) {
+      window.location.hash = nextPath;
     }
-    this.currentPath = this.normalizePath(window.location.hash);
+
     window.addEventListener('hashchange', () => {
-      const nextPath = this.normalizePath(window.location.hash);
+      const initialHash = window.location.hash;
+      const nextPath = this.normalizePath(initialHash);
+      if (initialHash !== nextPath) {
+        window.location.hash = nextPath;
+        return;
+      }
       if (this.currentPath === nextPath) {
         return;
       }
@@ -28,11 +33,8 @@ class Router {
       this.notify(nextPath);
     });
   }
-  get getCurrentPath() {
+  public get getCurrentPath() {
     return this.currentPath;
-  }
-  set setCurrentPath(path: Path) {
-    this.currentPath = path;
   }
 
   public navigate(path: Path) {
@@ -50,7 +52,6 @@ class Router {
   }
 
   validatePath(path: string): path is Path {
-    if (typeof path !== 'string') return false;
     return this.routes.some((route) => route === path);
   }
 
@@ -70,7 +71,7 @@ class Router {
     this.listeners.push(callback);
   }
 }
-// getCurrentPAth  тоже экспортировать ?
+
 export function navigate(path: Path) {
   router?.navigate(path);
 }
