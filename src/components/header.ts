@@ -1,4 +1,5 @@
 import { createEl } from '../utils/createElement';
+import '../styles/header.css';
 
 export function Header(): HTMLElement {
   const header = createEl({ tag: 'header', className: 'header' });
