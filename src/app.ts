@@ -1,9 +1,15 @@
+import { Header } from './components/header';
+import { Footer } from './components/footer';
+import { createEl } from './utils/createElement';
+import { CatalogPage } from './pages/catalog';
+import { AboutPage } from './pages/about';
+import { CartPage } from './pages/cart';
 
 type Path = '#/' | '#/about' | '#/cart';
 type RouteListener = (path: Path) => void;
 
 let router: Router | null = null;
-
+let outlet: HTMLElement | null = null;
 class Router {
   public routes: Path[];
   private currentPath: Path;
@@ -83,9 +89,22 @@ export function getCurrentPath() {
   return router?.getCurrentPath ?? '#/';
 }
 
-import { Header } from './components/header';
-import { Footer } from './components/footer';
+export function renderOutlet(component: HTMLElement): void {
+  if (!outlet) return;
+  outlet.replaceChildren(component);
+}
 
+export function renderPageByPath(path: Path) {
+  if (path === '#/about') {
+    renderOutlet(AboutPage());
+    return;
+  }
+  if (path === '#/cart') {
+    renderOutlet(CartPage());
+    return;
+  }
+  renderOutlet(CatalogPage());
+}
 
 export function initRouter() {
   const app = document.getElementById('app');
@@ -93,8 +112,12 @@ export function initRouter() {
 
   router = new Router();
 
+  outlet = createEl({ tag: 'main', className: 'outlet' });
 
   app.append(Header());
+  app.append(outlet);
   app.append(Footer());
 
+  renderPageByPath(getCurrentPath());
+  onRouteChange((newPath) => renderPageByPath(newPath));
 }

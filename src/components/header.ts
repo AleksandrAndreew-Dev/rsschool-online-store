@@ -1,6 +1,13 @@
 import { createEl } from '../utils/createElement';
 import '../styles/header.css';
 
+export function updateCartCount(count: number): void {
+  const countEl = document.getElementById('cart-count');
+  if (countEl) {
+    countEl.textContent = String(count);
+  }
+}
+
 export function Header(): HTMLElement {
   const header = createEl({ tag: 'header', className: 'header' });
   const container = createEl({ tag: 'div', className: 'header__container', parent: header });
