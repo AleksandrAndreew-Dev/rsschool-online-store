@@ -1,8 +1,5 @@
 import type { Product } from '../data/products';
 import { createEl } from '../utils/createElement.ts';
-export interface SearchableProduct {
-  name: string;
-}
 
 export function filterProductsByName(products: Product[], query: string) {
   const normalizeQuery = query.toLowerCase().trim();
