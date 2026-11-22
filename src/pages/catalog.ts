@@ -2,8 +2,6 @@ import { createEl } from '../utils/createElement.ts';
 import { products } from '../data/products.ts';
 import type { Product } from '../data/products.ts';
 
-// import {ProductCart} from '../components/product-card.ts'
-
 // Временный мок на время разработки до подключения KAN-05
 const createProductCardMock = (
   product: Product,
@@ -11,11 +9,10 @@ const createProductCardMock = (
 ): HTMLElement => {
   const card = createEl({ tag: 'article', className: 'card' });
 
-  const title = createEl({ tag: 'h2', className: 'card__title' });
-  title.textContent = product.name;
+  const title = createEl({ tag: 'h2', className: 'card__title', text: product.name });
 
-  const button = createEl({ tag: 'button', className: 'card__add-btn' });
-  button.textContent = 'В корзину';
+  const button = createEl({ tag: 'button', className: 'card__add-btn', text: 'В корзину' });
+
   button.addEventListener('click', () => onAdd(product));
 
   card.append(title, button);
@@ -32,6 +29,16 @@ export function renderCatalogGrid(
   items: Product[],
   onAddToCart: (product: Product) => void
 ): void {
+  if (items.length === 0) {
+    container.replaceChildren(
+      createEl({
+        tag: 'p',
+        className: 'catalog-page__empty',
+        text: 'Ничего не найдено',
+      })
+    );
+    return;
+  }
   container.replaceChildren(...items.map((product) => createProductCardMock(product, onAddToCart)));
 }
 
@@ -43,8 +50,9 @@ export function CatalogPage({ onAddToCart, items = products }: CatalogPageProps)
   const title = createEl({
     tag: 'h1',
     className: 'catalog-page__title',
+    text: 'Каталог',
   });
-  title.textContent = 'Каталог';
+
   const grid = createEl({
     tag: 'div',
     className: 'catalog-page__grid',
