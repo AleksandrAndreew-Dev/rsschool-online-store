@@ -34,7 +34,7 @@ export function createCategoryFilter({
     className: 'catalog-filter__option',
   }) as HTMLOptionElement;
   allOption.value = ALL_CATEGORIES_VALUE;
-  allOption.textContent = 'Все категории';
+  allOption.textContent = ALL_CATEGORIES_VALUE;
   select.append(allOption);
 
   const categories = getCategories(products);
@@ -44,7 +44,7 @@ export function createCategoryFilter({
       className: 'catalog-filter__option',
     }) as HTMLOptionElement;
     option.value = category;
-    option.textContent = category;
+    option.textContent = category.slice(0, 1).toUpperCase() + category.slice(1);
     select.append(option);
   }
   const normalizedSelected = selectedCategory.toLowerCase().trim();
