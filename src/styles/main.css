@@ -1,6 +1,23 @@
+:root {
+  --color-primary: #2b6cb0;
+  --color-primary-hover: #2a84e3;
+  --color-primary-bg: rgba(43, 108, 176, 0.1);
+  --color-primary-border: rgba(43, 108, 176, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #4da6e0;
+    --color-primary-hover: #4090d4;
+    --color-primary-bg: rgba(77, 166, 224, 0.15);
+    --color-primary-border: rgba(77, 166, 224, 0.5);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
