@@ -10,10 +10,10 @@ export function filterByPriceRange(
   { min, max }: { min?: number; max?: number }
 ): Product[] {
   return products.filter((product) => {
-    if (min !== undefined && product.price < min) {
+    if (min !== undefined && Number.isFinite(min) && product.price < min) {
       return false;
     }
-    if (max !== undefined && product.price > max) {
+    if (max !== undefined && Number.isFinite(max) && product.price > max) {
       return false;
     }
 
@@ -25,6 +25,10 @@ export function createPriceFilter({ onChange }: PriceFilterOptions): HTMLElement
   const priceFilter = createEl({
     tag: 'div',
     className: 'price-filter',
+  });
+  const priceFilterTitle = createEl({
+    tag: 'span',
+    className: 'price-filter__title',
     text: 'Цена',
   });
 
@@ -76,7 +80,8 @@ export function createPriceFilter({ onChange }: PriceFilterOptions): HTMLElement
     const raw = input.value.trim();
     if (raw === '') return undefined;
     const num = Number(raw);
-    return isNaN(num) ? undefined : num;
+    if (isNaN(num) || !Number.isFinite(num) || num < 0) return undefined;
+    return num;
   };
 
   const onInput = () => {
@@ -88,7 +93,13 @@ export function createPriceFilter({ onChange }: PriceFilterOptions): HTMLElement
   priceInputMin.addEventListener('input', onInput);
   priceInputMax.addEventListener('input', onInput);
 
-  priceFilter.append(priceInputMinLabel, priceInputMin, priceInputMaxLabel, priceInputMax);
+  priceFilter.append(
+    priceFilterTitle,
+    priceInputMinLabel,
+    priceInputMin,
+    priceInputMaxLabel,
+    priceInputMax
+  );
 
   return priceFilter;
 }
