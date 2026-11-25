@@ -80,7 +80,7 @@ export function CatalogPage({
   });
 
   const categoryFilter = createCategoryFilter({
-    products,
+    products: items,
     selectedCategory: currentCategory,
     onChange: (category) => {
       currentCategory = category;

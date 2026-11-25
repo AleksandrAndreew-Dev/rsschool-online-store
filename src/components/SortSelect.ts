@@ -14,7 +14,7 @@ const LABELS: Record<SortOrder, string> = {
 export function createSortSelect({ value = 'default', onChange }: SortSelectOptions): HTMLElement {
   const wrapper = createEl({
     tag: 'div',
-    className: 'catalog-filter',
+    className: 'sort-select',
   });
 
   const label = createEl({
@@ -26,14 +26,14 @@ export function createSortSelect({ value = 'default', onChange }: SortSelectOpti
 
   const select = createEl({
     tag: 'select',
-    className: 'catalog-filter__select',
+    className: 'sort-select__select',
     attrs: { id: 'catalog-sort-select' },
   }) as HTMLSelectElement;
 
   for (const [order, text] of Object.entries(LABELS)) {
     const option = createEl({
       tag: 'option',
-      className: 'catalog-filter__option',
+      className: 'sort-select__option',
       text,
       attrs: { value: order },
     }) as HTMLOptionElement;
