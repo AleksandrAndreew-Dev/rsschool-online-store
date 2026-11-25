@@ -17,7 +17,7 @@
     "price": 67.19,
     "manufacturer": "LITTLE DOCTOR",
     "description": "Производитель: КИТАЙ. Автоматический тонометр на запястье.",
-    "image": "./assets/images/medtechassets/images/medtech/ld-12.jpg"
+    "image": "./assets/images/medtech/ld-12.jpg"
   },
   {
     "id": "34854",
@@ -27,7 +27,7 @@
     "price": 103.69,
     "manufacturer": "LITTLE DOCTOR",
     "description": "Производитель: КИТАЙ. Автоматический тонометр на плечо.",
-    "image": "./assets/images/medtechassets/images/medtech/ld-30.jpg"
+    "image": "./assets/images/medtech/ld-30.jpg"
   },
   {
     "id": "34856",
@@ -37,7 +37,7 @@
     "price": 40.49,
     "manufacturer": "SHANGHAI LITTLE DOCTOR ELECTRONIC",
     "description": "Производитель: КИТАЙ. Механический тонометр с фонендоскопом.",
-    "image": "./assets/images/medtechassets/images/medtech/ld-71.jpg"
+    "image": "./assets/images/medtech/ld-71.jpg"
   },
   {
     "id": "36101",
@@ -47,7 +47,7 @@
     "price": 145.5,
     "manufacturer": "OMRON HEALTHCARE",
     "description": "Производитель: ЯПОНИЯ / ВЬЕТНАМ. Автоматический тонометр с веерообразной манжетой 22-32 см.",
-    "image": "./assets/images/medtechassets/images/medtech/omron-m2.webp"
+    "image": "./assets/images/medtech/omron-m2.webp"
   },
   {
     "id": "36102",
@@ -57,7 +57,7 @@
     "price": 215.0,
     "manufacturer": "OMRON HEALTHCARE",
     "description": "Производитель: ЯПОНИЯ. Автоматический тонометр с умной манжетой Intelli Wrap 22-42 см и адаптером.",
-    "image": "./assets/images/medtechassets/images/medtech/omron-m3-comfort.webp"
+    "image": "./assets/images/medtech/omron-m3-comfort.webp"
   },
   {
     "id": "36103",
@@ -67,7 +67,7 @@
     "price": 138.9,
     "manufacturer": "MICROLIFE AG",
     "description": "Производитель: ШВЕЙЦАРИЯ. Автоматический тонометр с PAD-технологией выявления аритмии.",
-    "image": "./assets/images/medtechassets/images/medtech/microlife-a2.jpg"
+    "image": "./assets/images/medtech/microlife-a2.jpg"
   },
   {
     "id": "36106",
@@ -77,7 +77,7 @@
     "price": 74.6,
     "manufacturer": "A&D COMPANY",
     "description": "Производитель: ЯПОНИЯ / КИТАЙ. Компактный полуавтоматический тонометр на плечо.",
-    "image": "./assets/images/medtechassets/images/medtech/and-ua-604.jpg"
+    "image": "./assets/images/medtech/and-ua-604.jpg"
   },
   {
     "id": "36107",
@@ -87,7 +87,7 @@
     "price": 46.8,
     "manufacturer": "CS MEDICA",
     "description": "Производитель: КИТАЙ. Механический тонометр с встроенным в манжету фонендоскопом.",
-    "image": "./assets/images/medtechassets/images/medtech/medica-cs-105.jpg"
+    "image": "./assets/images/medtech/medica-cs-105.jpg"
   },
   {
     "id": "36108",
@@ -97,7 +97,7 @@
     "price": 21.5,
     "manufacturer": "OMRON HEALTHCARE",
     "description": "Производитель: ЯПОНИЯ / КИТАЙ. Цифровой медицинский термометр, время измерения от 60 сек.",
-    "image": "./assets/images/medtechassets/images/medtech/omron-eco-temp-basic.webp"
+    "image": "./assets/images/medtech/omron-eco-temp-basic.webp"
   },
   {
     "id": "36109",
@@ -107,7 +107,7 @@
     "price": 34.9,
     "manufacturer": "MICROLIFE AG",
     "description": "Производитель: ШВЕЙЦАРИЯ. Быстрый термометр с гибким наконечником и подсветкой экрана (10 сек).",
-    "image": "./assets/images/medtechassets/images/medtech/microlife-mt-1951.jpg"
+    "image": "./assets/images/medtech/microlife-mt-1951.jpg"
   },
   {
     "id": "36110",
@@ -117,7 +117,7 @@
     "price": 16.4,
     "manufacturer": "LITTLE DOCTOR",
     "description": "Производитель: КИТАЙ. Влагозащищенный электронный термометр с памятью последнего измерения.",
-    "image": "./assets/images/medtechassets/images/medtech/ld-300.jpg"
+    "image": "./assets/images/medtech/ld-300.jpg"
   },
   {
     "id": "36111",
@@ -127,7 +127,7 @@
     "price": 28.7,
     "manufacturer": "GERATHERM MEDICAL",
     "description": "Производитель: ГЕРМАНИЯ. Стеклянный медицинский термометр с безопасным сплавом галинстан.",
-    "image": "./assets/images/medtechassets/images/medtech/geratherm-classic.jpg"
+    "image": "./assets/images/medtech/geratherm-classic.jpg"
   },
   {
     "id": "36112",
@@ -137,7 +137,7 @@
     "price": 98.5,
     "manufacturer": "B.WELL SWISS",
     "description": "Производитель: ШВЕЙЦАРИЯ. Бесконтактный термометр для измерения температуры тела, воздуха и жидкости за 1 сек.",
-    "image": "./assets/images/medtechassets/images/medtech/bwell-wf-4000.jpg"
+    "image": "./assets/images/medtech/bwell-wf-4000.jpg"
   },
   {
     "id": "36113",
@@ -147,7 +147,7 @@
     "price": 129.0,
     "manufacturer": "MICROLIFE AG",
     "description": "Производитель: ШВЕЙЦАРИЯ. Бесконтактный термометр с автоизмерением при приближении на 5 см.",
-    "image": "./assets/images/medtechassets/images/medtech/microlife-nc-200.webp"
+    "image": "./assets/images/medtech/microlife-nc-200.webp"
   },
   {
     "id": "36114",
@@ -157,7 +157,7 @@
     "price": 114.8,
     "manufacturer": "BEURER",
     "description": "Производитель: ГЕРМАНИЯ. Бесконтактный лобный термометр с памятью на 60 измерений.",
-    "image": "./assets/images/medtechassets/images/medtech/beurer-ft-85.webp"
+    "image": "./assets/images/medtech/beurer-ft-85.webp"
   },
   {
     "id": "35264",
