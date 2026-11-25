@@ -9,7 +9,7 @@
 
 .cart-item {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr auto 1fr auto;
   align-items: center;
   gap: 16px;
   padding: 16px;
@@ -20,4 +20,15 @@
 
 .cart-item__subtotal {
   font-weight: 700;
+}
+
+.cart-item__controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-item__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
